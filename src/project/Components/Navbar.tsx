@@ -1,8 +1,11 @@
+import { icon } from "../../assets";
+
 const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <div className="text-xl font-bold flex items-center justify-center gap-2">
+          <img src={icon} alt="" className="w-12" />
           <span className="text-gray-400">Spot</span>
           <span className="text-white">Lens</span>
         </div>

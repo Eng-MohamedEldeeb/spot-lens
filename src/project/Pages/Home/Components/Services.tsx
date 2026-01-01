@@ -20,7 +20,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-neutral-800">
+    <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
         {services.map((s, i) => (
           <div

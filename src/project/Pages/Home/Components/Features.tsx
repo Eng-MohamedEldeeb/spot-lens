@@ -1,26 +1,27 @@
 const Features = () => {
   const features = [
-    "Professional Photoshoot Sessions  ",
-    "Flexible Scheduling",
-    "High-Quality Delivery",
-    "Custom Packages Based on Your Needs",
+    {
+      icon: "fa-regular fa-camera fa-2xl",
+      title: "Professional Equipment",
+    },
+    { icon: "fa-regular fa-calendar-check fa-2xl", title: "Easy Booking" },
+    { icon: "fa-solid fa-truck-fast fa-2xl", title: "Fast Delivery" },
+    { icon: "fa-solid fa-user fa-2xl", title: "Experienced Team" },
   ];
 
   return (
-    <section className="py-20">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">
-          <span className="text-amber-600 font-extrabold">End-to-End</span>{" "}
-          Creative Solutions
-        </h2>
-        <h3 className="text-xl font-semibold mb-12">Photography services</h3>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {features.map((f, i) => (
-            <div key={i} className="bg-neutral-800 p-6 rounded-xl">
-              {f}
-            </div>
-          ))}
-        </div>
+    <section className="py-20 bg-neutral-800">
+      <h2 className="text-center text-3xl font-bold mb-12 text-white">
+        Integrated Creative Solutions
+      </h2>
+
+      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-6 text-white">
+        {features.map((f, i) => (
+          <div key={i} className="text-center">
+            <i className={f.icon} />
+            <p className="font-medium mt-2.5">{f.title}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

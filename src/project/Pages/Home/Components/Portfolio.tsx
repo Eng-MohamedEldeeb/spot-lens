@@ -1,22 +1,62 @@
+import { pic1, pic2, pic3, pic4 } from "../../../../assets";
+
 const Portfolio = () => {
   return (
-    <section className="py-20 bg-neutral-800">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          Our Featured Work
-        </h2>
-        <h3 className="text-xl font-semibold text-center mb-12">
-          A selection of our recent photography projects
-        </h3>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {Array.from({ length: 6 }).map((_, i) => (
+    <section className="py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Featured Work
+          </h2>
+          <p className="text-lg md:text-xl text-gray-900">
+            Professional real estate consulting, marketing, and sales services
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <div className="space-y-6">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src={pic1}
+                alt="Top left image"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src={pic2}
+                alt="Bottom left image"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
             <img
-              key={i}
-              src=""
-              alt=""
-              className="rounded-xl h-64 w-full object-cover"
+              src={pic3}
+              alt="Center portrait image"
+              className="w-full h-full object-cover"
             />
-          ))}
+          </div>
+
+          <div className="space-y-6">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src={pic4}
+                alt="Top right image"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src={pic2}
+                alt="Bottom right image"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
